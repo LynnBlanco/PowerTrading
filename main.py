@@ -17,8 +17,8 @@ def strategy(generation, consumption):
     consumption = pd.read_csv(consumption, header=None)
 
     get_date = generation.iloc[-1, 0]
-    month = int(get_date.split('/')[1])
-    day = int(get_date.split('/')[2].split(' ')[0])
+    month = int(get_date.split('-')[1])
+    day = int(get_date.split('-')[2].split(' ')[0])
 
     next_day = day
     next_month = month
