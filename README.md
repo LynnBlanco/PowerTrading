@@ -9,10 +9,37 @@ Design an agent for bidding power to minimize your electricity bill.
 ```
 多餘電量 = 產電量 - 用電量
 ```
-|           | target value | target price | action |
-|:---------:|:------------:|:------------:|:------:|
-|多餘電量 > 0| 多餘電量 </br> 產電量 - 多餘電量 | 0.01 </br> 2.53 | sell </br> sell |
-|多餘電量 < 0| -多餘電量 </br> 產電量 | 2.52 </br> 2.53 | buy </br> sell |
+
+<table>
+  <tr align="center">
+    <td>  </td>
+    <td> target value </td>
+    <td> target price </td>
+    <td> action </td>
+  </tr>
+  <tr align="center">              
+    <td rowspan="2"> 多餘電量 > 0 </td>
+    <td> 多餘電量 </td>
+    <td> 0.01 </td>
+    <td> sell </td>
+  </tr>
+  <tr align="center">
+    <td> 產電量 - 多餘電量 </td>
+    <td> 2.53 </td>
+    <td> sell </td>
+  </tr>
+  <tr align="center">              
+    <td rowspan="2"> 多餘電量 < 0 </td>
+    <td> -多餘電量 </td>
+    <td> 2.52 </td>
+    <td> buy </td>
+  </tr>
+  <tr align="center">
+    <td> 產電量 </td>
+    <td> 2.53 </td>
+    <td> sell </td>
+  </tr>
+</table>
 
 ## Code Execution
 Environment: ```Python 3.8.13```
